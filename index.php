@@ -51,7 +51,7 @@
 		<tr>
 			<th id="bestScore">250</th>
 			<th id="currentScore">224</th>
-			<th id="remainingTime">50</th>
+			<th id="timer">50</th>
 		</tr>
 	</table>
   </body>
