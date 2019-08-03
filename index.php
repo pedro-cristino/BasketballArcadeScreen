@@ -1,4 +1,7 @@
-<?php ?>
+<?php 
+	//We launch the scoreboard:
+	system("python scoreboard.py > /dev/null 2>&1 &");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,12 +26,20 @@
 	  xhttp.open("GET", "readfile.php", true);
 	  xhttp.send();
 	}
+	function stopPythonScript(){var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+		console.log("script stopped");
+	  };
+	  xhttp.open("GET", "stopscript.php?pid="+pid, true);
+	  xhttp.send();
+	}
 	function gameLoop(){
 		if(!gameOver)
 			loadCurrentScore();
 		else{
 			clearInterval(loop);
 			clearInterval(timeLoop);
+			stopPythonScript();
 		}
 	}
 	function timer(){
