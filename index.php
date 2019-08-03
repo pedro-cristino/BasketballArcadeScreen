@@ -1,6 +1,7 @@
 <?php 
 	//We launch the scoreboard:
-	shell_exec("python scoreboard.py > /dev/null 2>&1 &");
+	//$command = escapeshellcmd('python /var/html/www/BasketballArcadeScreen/scoreboard.py');
+	exec('sudo -u root python scoreboard.py');
 ?>
 <!DOCTYPE html>
 <html lang="en">

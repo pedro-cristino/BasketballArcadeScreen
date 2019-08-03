@@ -1,4 +1,4 @@
 <?php 
 $pid = $_GET["pid"];
-shell_exec("kill " + $pid);
+exec("sudo -u root kill " + $pid);
 ?>
