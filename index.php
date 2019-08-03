@@ -27,7 +27,7 @@
 			  loadCurrentScore();
 		  }
 		  else{
-			  gameOver();
+			  gameOverFunc();
 		  }
 		}
 	  };
@@ -41,7 +41,7 @@
 	  xhttp.open("GET", "stopscript.php?pid="+pid, true);
 	  xhttp.send();
 	}
-	function gameOver(){
+	function gameOverFunc(){
 		clearInterval(timeLoop);
 		stopPythonScript();
 	}
