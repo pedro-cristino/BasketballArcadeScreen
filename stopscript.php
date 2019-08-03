@@ -1,4 +1,4 @@
 <?php 
 $pid = $_GET["pid"];
-system("kill " + $pid);
+shell_exec("kill " + $pid);
 ?>

@@ -1,6 +1,6 @@
 <?php 
 	//We launch the scoreboard:
-	system("python scoreboard.py > /dev/null 2>&1 &");
+	shell_exec("python scoreboard.py > /dev/null 2>&1 &");
 ?>
 <!DOCTYPE html>
 <html lang="en">
