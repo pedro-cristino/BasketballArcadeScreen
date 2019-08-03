@@ -21,7 +21,14 @@
 		if (this.readyState == 4 && this.status == 200) {
 		  const rep = this.responseText;
 		  document.getElementById("currentScore").innerHTML = rep.split(";")[0];
-		  pid = rep.split(",")[1];
+		  pid = rep.split(";")[1];
+		  if(!gameOver)
+		  {
+			  loadCurrentScore();
+		  }
+		  else{
+			  gameOver();
+		  }
 		}
 	  };
 	  xhttp.open("GET", "readfile.php", true);
@@ -34,14 +41,9 @@
 	  xhttp.open("GET", "stopscript.php?pid="+pid, true);
 	  xhttp.send();
 	}
-	function gameLoop(){
-		if(!gameOver)
-			loadCurrentScore();
-		else{
-			clearInterval(loop);
-			clearInterval(timeLoop);
-			stopPythonScript();
-		}
+	function gameOver(){
+		clearInterval(timeLoop);
+		stopPythonScript();
 	}
 	function timer(){
 		timeLeft--;
@@ -51,8 +53,8 @@
 			gameOver =true;
 		}
 	}
-	let loop = setInterval(gameLoop,10);
 	let timeLoop = setInterval(timer,1000);
+	loadCurrentScore();
   </script>
     <table style="width:100%;border:1px solid white">
 		<tr>
