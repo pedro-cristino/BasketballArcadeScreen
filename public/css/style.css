@@ -1,0 +1,8 @@
+@font-face {
+  font-family: OldSchoolAdventures;
+  src: url(./OldSchoolAdventures.ttf) format('ttf'),
+       url(./OldSchoolAdventures.woff) format('woff');
+}
+body {
+  font-family: OldSchoolAdventures, sans-serif;
+}

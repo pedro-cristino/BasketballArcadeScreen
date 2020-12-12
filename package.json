@@ -1,0 +1,16 @@
+{
+  "name": "hoopspi",
+  "version": "0.0.1",
+  "description": "A connected scoreboard for my basketball hoop",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "pigpio": "^1.2.1",
+    "ws": "^1.1.1"
+  },
+  "devDependencies": {},
+  "author": "Patrick Catanzariti",
+  "license": "MIT"
+}
